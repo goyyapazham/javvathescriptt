@@ -1,8 +1,7 @@
-var list = document.getElementById("thelist");
-
-var add = function(list) {
-    var li = document.createElement("li");
-    li.appendChild("I am appending a child!");
+var myList = document.getElementsById('thelist').innerHTML;
+function foo () {
+  console.log(myList[0]);
 };
 
-b.addEventListener('click', add);
+
+b.addEventListener('click', foo);
