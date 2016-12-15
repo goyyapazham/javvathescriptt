@@ -1,7 +1,8 @@
 var list = document.getElementById("thelist");
 
 var add = function(list) {
-    list.push("lol");
+    var li = document.createElement("li");
+    li.appendChild("I am appending a child!");
 };
 
 b.addEventListener('click', add);
