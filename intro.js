@@ -1,8 +1,24 @@
-var list = document.getElementById("thelist");
+var addChildOnClick = function() {
 
-var add = function(list) {
+    var list = document.getElementById("thelist");
     var li = document.createElement("li");
-    li.appendChild("I am appending a child!");
+    var tn = document.createTextNode(
+	"Random: " + Math.floor((Math.random() * 100)).toString()
+    );
+    
+    li.appendChild(tn);
+    list.appendChild(li);
+    
 };
 
-b.addEventListener('click', add);
+var changeHeaderOnHover = function() {
+
+    
+    
+}
+
+b.addEventListener('click', addChildOnClick);
+
+for node in document.getElementsByTag("li") {
+
+}
