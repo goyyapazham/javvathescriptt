@@ -47,3 +47,34 @@ for ( var i=0; i < elements.length; i++ ) {
     });
     
 }
+
+//helper fibonacci generator
+var fib = function(n) {
+    if( n == 0 )
+	return 0;
+    else if( n <= 2 )
+	return 1;
+    else
+	return fib(n-1) + fib(n-2);
+}
+
+//create counter
+var i = 0;
+//capture ordered list object thingy(?)
+var ol = document.getElementById("anotha1");
+
+//add event listener for second button
+sloopjohn.addEventListener('click', function() {
+    //create next list element
+    var next = document.createElement("li");
+
+    //use counter to generate next fibonacci #
+    var tn = document.createTextNode( fib(i).toString() );
+
+    //append next fibonacci item to list
+    next.append(tn);
+    ol.append(next);
+
+    //increment counter
+    i++;
+});
